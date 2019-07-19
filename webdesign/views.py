@@ -12,3 +12,8 @@ def about_page(request):
 	
 def home1(request):
 	return render(request,'front_page_RFAPL.html')	
+
+
+def career_page(request):
+	return render(request,'career.html')
+

@@ -16,19 +16,21 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.conf.urls import url
-from . import views
+from django.conf.urls import url,include
+from . import views as w
 from .views import home_page,about_page,home1
-
+from web import views
+from web.views import career_view as vw
+from web.urls import urlpatterns as web_urls
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_page),
-    url(r'^about$',views.about_page, name="about_page"),
-    url(r'^home$', views.home1,name="home1"),
-    url(r'^about/contact$', views.home1,name="home1"),
-
+    url(r'^about$',w.about_page, name="about_page"),
+    url(r'^home$', w.home1,name="home1"),
+    url(r'^about/contact$', w.home1,name="home1"),
+    url(r'^career$', vw , name="vw"),
     
 ]
 

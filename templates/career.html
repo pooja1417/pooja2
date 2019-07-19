@@ -1,0 +1,504 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+
+.bg{
+  height:400px;
+  display:flex;
+  background:url("/static/img/cover.jpg") center center;
+  background-size:cover;
+
+}
+
+
+.fab{color:white}
+
+
+.dropdown-menu{background-color:#122f5c;}
+.dropdown-item{color:white}
+.dropdown-header{color:#8b939e}
+.navbar-expand-lg{height:auto}
+.navbar-form {margin-top:5px;
+margin-right:5px}
+.ab{margin-top:9px;
+margin-bottom:15px;margin-left:20px}
+#demo-2{margin-left:170px;}
+a {
+	color: #69C;
+	text-decoration: none;
+}
+a:hover {
+	color: #F60;
+}
+h1 {
+	font: 1.7em;
+	line-height: 110%;
+	color: #000;
+}
+p {
+	margin: 0 0 20px;
+}
+
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+/* Demo 2 */
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #fff;
+}
+#demo-2 input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+}
+@media only screen and (max-width: 768px) {
+    #fade1 {
+        display: none;
+    }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+width:900px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+body{background-color:#e9f1f7}
+.fab{font-size:40px;padding:2px}
+.cg{background-color:#11294f}
+
+ul li a:hover{text-decoration:none;background-color:green}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+<a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PLATFORM
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Overview</a>
+            <a class="dropdown-item" href="#">Getting Started with DataRobot</a>
+            <a class="dropdown-item" href="#">what is automated Machine learning</a>
+            <h6 class="dropdown-header">PRODUCTS</h6>
+            <a class="dropdown-item" href="#">Automated Machine learning</a>
+            <a class="dropdown-item" href="#">Automated Time series</a>
+            <a class="dropdown-item" href="#">Governance</a>
+            <h6 class="dropdown-header">PRODUCTS</h6>
+            <a class="dropdown-item" href="#">Automated Machine learning</a>
+            <a class="dropdown-item" href="#">Automated Time series</a>
+            <a class="dropdown-item" href="#">Governance</a>
+          </div>
+        </li>
+<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SOLUTIONS
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <h6 class="dropdown-header">BY ROLE</h6>
+            <a class="dropdown-item" href="#">Data Analysts</a>
+            <a class="dropdown-item" href="#">Data Scientists</a>
+            <a class="dropdown-item" href="#">Executives</a>
+            <a class="dropdown-item" href="#">Software Developers</a>
+            <a class="dropdown-item" href="#">IT Professionals</a>
+            <h6 class="dropdown-header">BY INDUSTRY/USE</h6>
+            <a class="dropdown-item" href="#">Banking</a>
+            <a class="dropdown-item" href="#">Healthcare</a>
+            <a class="dropdown-item" href="#">Insurance</a>
+            <a class="dropdown-item" href="#">Manufacturing</a>
+            <a class="dropdown-item" href="#">Automated Machine learning</a>
+            <a class="dropdown-item" href="#">Automated Time series</a>
+            <a class="dropdown-item" href="#">Governance</a>
+          </div>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            RESOURCES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Resource Library</a>
+            <a class="dropdown-item" href="#">Customers</a>
+            <a class="dropdown-item" href="#">Blog</a>
+            <a class="dropdown-item" href="#">Webinars</a>
+            <a class="dropdown-item" href="#">Wiki</a>
+          </div>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PARTNERS
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Partners Overview</a>
+            <a class="dropdown-item" href="#">Technology Alliances</a>
+            <a class="dropdown-item" href="#">Value Added Resellers</a>
+            <a class="dropdown-item" href="#">Solution Partners</a>
+          </div>
+        </li>
+      
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">About Us</a>
+          <a class="dropdown-item" href="#">Leadership Team</a>
+          <a class="dropdown-item" href="#">Newsroom</a>
+        </div>
+      </li>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          WE ARE HIRING  <span class="badge badge-danger">{{ct}}</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Open Positions</a>
+          <a class="dropdown-item" href="#">Our Culture</a>
+          <a class="dropdown-item" href="#">Hiring Heroes</a>
+        </div>
+      </li>
+    </ul>
+
+<form id="demo-2">
+	<input type="search" placeholder="Search">
+</form>
+  <button type="button" class="btn btn-danger ab">Contact Us</button>
+</div></div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid bg">
+  <div class="container">
+    <div class="row">
+<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+<br>
+  <div class="btn-group" role="group">
+    <button  style="border:1px solid grey; background-color: white;color:black;width:290px" type="button" class="btn btn-secondary">
+      All Open Positions
+    </button>
+  </div>
+<br><br>
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1"style="border:1px solid grey; background-color: transparent;width:290px;" type="button" class="btn btn-secondary"data-toggle="dropdown">
+      <i class="fa fa-plus fa-1x"></i>       Departments
+    </button>
+    <div class="dropdown-menu" style="width:290px" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" href="#">Engineering</a>
+      <a class="dropdown-item" href="#">Sales</a>
+      <a class="dropdown-item" href="#">Market</a>
+      <a class="dropdown-item" href="#">Business</a>
+    </div>
+  </div>
+<br><br>
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" style="border:1px solid grey; background-color: transparent;width:290px" type="button" class="btn btn-secondary" data-toggle="dropdown">
+      <i class="fa fa-minus fa-1x"></i>          Locations
+    </button>
+    <div class="dropdown-menu"style="width:290px" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" href="#">Dropdown link</a>
+      <a class="dropdown-item" href="#">Dropdown link</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-8 col-lg-8 col-xs-0 col-sm-0" id="fade1">
+<h2 style="color:white"><b>Careers</b> </h2><br><br><br>
+<p style="color:white;font-size:20px">At DataRobot, you will work with the world's most talented data scientists, engineers, and thought leaders to change how businesses work. We think globally, stand outside the box and see our workmates as friends.</p>
+</div>
+
+</div>          <!-----row end-------------->
+</div>  
+           <!---- container end---->
+</div>           <!---jumbo end--->
+
+
+
+<br>
+<br>
+<br>
+
+
+<div class="container">
+    <div class="row">
+<div class="col-md-3 col-lg-4"><div class="row">
+<div class="form-group has-search">
+   <span class="fa fa-search form-control-feedback"></span><input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search for roles.." title="Type in a name">
+</div></div>
+<div class="row">
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" style="width:270px;text-align:left"type="button" data-toggle="dropdown">Departments        <span class="caret"style="float:right"></span>
+<br>all departments</button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div> 
+</div>
+<div class="row">
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" style="width:270px;text-align:left"type="button" data-toggle="dropdown">Locations
+  <span class="caret"></span><br> all locations</button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div> 
+
+
+
+</div>
+
+</div>
+<div class="col-md-9 col-lg-8 col-xs-12 col-sm-12">
+
+  <p>Viewing <b>{{ ct }} </b> open positions in all locations </p>
+
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:50%;">Role</th>
+    <th style="width:30%;">Department</th>
+    <th style="width:20%;">Location</th>
+  </tr>
+  {% if obj %}
+  {% for i in obj %}
+<tr>
+  
+<td>{{ i.Role }}</td>
+<td>{{ i.Department }}</td>
+ <td>{{ i.Location }}</td>
+
+</tr>
+{% endfor %}
+{% endif %}
+
+</table>
+</div>
+</div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+<div class="cg">
+<footer>
+
+  <div class="container">
+  <div class="row">
+  <div class="col-xs-3 col-md-4 col-sm-3">
+  	  	<div class="footer-header">
+                              <h4 style="color:white">PLATFORM</h4>
+  	  					<ul class="footer-link">
+  							<li><a href="#"style="color:white">About Us</a></li>
+  							<li><a href="#"style="color:white">Help Center</a></li>
+  							<li><a href="#"style="color:white">Our Team</a></li>
+  							<li><a href="#"style="color:white">Privacy Policy</a></li>
+  						</ul>
+        </div>
+  	  			</div>
+  <div class="col-xs-3 col-md-4 col-sm-3">
+  	  			<div class="footer-header">
+  	             <h4 style="color:white">SOLUTIONS/USES</h4>
+  	  					<ul class="footer-link">
+  							<li><a href="#"style="color:white">About Us</a></li>
+  							<li><a href="#"style="color:white">Help Center</a></li>
+  							<li><a href="#"style="color:white">Our Team</a></li>
+  							<li><a href="#"style="color:white">Privacy Policy</a></li>
+  						</ul>
+            </div></div>
+  <div class="col-xs-3 col-md-2 col-sm-3">
+  	  				<div class="footer-header" id="contact">
+  	  					<h4 style="color:white">RESOURCES</h4>
+  	  					<ul class="footer-link">
+  							<li><a href="#"style="color:white">Wiki</a></li>
+  							<li><a href="#"style="color:white">Blog</a></li>
+  							<li><a href="#"style="color:white">Webinars</a></li>
+  							<li><a href="#"style="color:white">Resource Library</a></li>
+                                                        <li><a href="#"style="color:white">Wiki</a></li>
+  						</ul>
+  	  				</div>
+  	  			</div>
+<div class="col-xs-3 col-md-2 col-sm-3">
+  	  			<div class="footer-header">
+  	             <h4 style="color:white">COMPANY</h4>
+  	  					<ul class="footer-link">
+  							<li><a href="#"style="color:white">About Us</a></li>
+  							<li><a href="#"style="color:white">Help Center</a></li>
+  							<li><a href="#"style="color:white">Our Team</a></li>
+  							<li><a href="#"style="color:white">Privacy Policy</a></li>
+                                                        <li><a href="#"style="color:white">Culture</a></li>
+  						</ul>
+            </div></div>
+  	  	</div>
+  	  	</div>
+ <hr class="my-4" style="background-color:white; width:80%">
+<div class="container">
+<div class="row">
+<div class="col-md-3"><i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></div>
+<div class="col-md-6"><p style="text-align:center;color:white">One International Place, 5th Floor, Boston, MA 02110</p><p style="text-align:center;color:white">Contact: info@datarobot.com </p></div>
+<div class="col-md-3"><p style="float:right;color:white">DataRobot, Inc. © 2019 </p><p style="float:right;color:white">Privacy and Terms of Service  </p></div>
+</div></div>
+
+</footer>
+</div>
+
+
+
+
+
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+}}
+</script>
+
+</body>
+</html>
